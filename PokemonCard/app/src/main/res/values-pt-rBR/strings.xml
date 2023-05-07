@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">GuilhermeGarcia_RM87192</string>
+    <string name="description_pokemon">Seu excelente olfato garante que este Pokémon não esqueça nenhum cheiro, não importa do quê. Ele usa o olfato para detectar as emoções dos outros.</string>
+    <string name="button_edit">+ EDITAR HABILIDADES</string>
+    <string name="description">Descrição:</string>
+    <string name="skills">Habilidades:</string>
+    <string name="skills_default">> adicione habilidades com botão</string>
+    <string name="button_theme_scarlet">SCARLET</string>
+    <string name="button_theme_violet">VIOLET</string>
+    <string name="skill_list">Lista de Habilidades</string>
+    <string name="skill1">Mordida</string>
+    <string name="skill2">Brasas</string>
+    <string name="skill3">Presa de Fogo</string>
+    <string name="skill4">Explosão de Fogo</string>
+    <string name="button_Update_Skills">Atualizar Habilidades</string>
+
+
+</resources>

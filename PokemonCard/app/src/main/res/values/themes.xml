@@ -1,0 +1,22 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.GuilhermeGarcia_RM87192" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/scarlet</item>
+        <item name="colorPrimaryVariant">@color/backgroundScarlet</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="android:windowBackground">@color/backgroundScarlet</item>
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="ThemeViolet" parent="Theme.GuilhermeGarcia_RM87192">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/violet</item>
+        <item name="colorPrimaryVariant">@color/backgroundViolet</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="android:windowBackground">@color/backgroundViolet</item>
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+</resources>
