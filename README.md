@@ -1,2 +1,2 @@
-# KotlinPokemonCard
-Studying android Strings, themes, Intents, Motivation and layouts
+# AndroidPokemonCardApp
+Studying android Strings, themes, Intents, Motivation and layouts with Kotlin
