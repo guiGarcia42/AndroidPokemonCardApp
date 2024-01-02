@@ -4,7 +4,7 @@
     <style name="switchStyle">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textSize">15dp</item>
+        <item name="android:textSize">25dp</item>
     </style>
 
     <style name="style_atributos">
@@ -18,7 +18,6 @@
     <style name="style_cardView">
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:background">@color/white</item>
         <item name="cardCornerRadius">20dp</item>
     </style>
 

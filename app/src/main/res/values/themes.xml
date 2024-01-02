@@ -1,22 +1,31 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Theme.GuilhermeGarcia_RM87192" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+
+    <!-- TemaScarlet -->
+    <style name="Theme.GuilhermeGarcia_RM87192.TemaScarlet" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/scarlet</item>
-        <item name="colorPrimaryVariant">@color/backgroundScarlet</item>
+        <item name="colorPrimaryVariant">@drawable/gradient_background_scarlet</item>
         <item name="colorOnPrimary">@color/white</item>
-        <item name="android:windowBackground">@color/backgroundScarlet</item>
-        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <item name="colorSecondary">@color/backgroundScarlet</item>
+        <item name="colorPrimaryDark">@color/gray</item>
+        <item name="android:windowBackground">@color/gray</item>
+        <item name="colorOnBackground">@color/gray</item>
+        <item name="android:textColor">@color/black</item>
         <!-- Customize your theme here. -->
     </style>
 
-    <style name="ThemeViolet" parent="Theme.GuilhermeGarcia_RM87192">
+    <!-- TemaViolet -->
+    <style name="Theme.GuilhermeGarcia_RM87192.TemaViolet" parent="Theme.GuilhermeGarcia_RM87192.TemaScarlet">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/violet</item>
-        <item name="colorPrimaryVariant">@color/backgroundViolet</item>
+        <item name="colorPrimaryVariant">@drawable/gradient_background_violet</item>
         <item name="colorOnPrimary">@color/white</item>
-        <item name="android:windowBackground">@color/backgroundViolet</item>
-        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <item name="colorSecondary">@color/backgroundViolet</item>
+        <item name="colorPrimaryDark">@color/gray</item>
+        <item name="android:windowBackground">@color/gray</item>
+        <item name="colorOnBackground">@color/gray</item>
+        <item name="android:textColor">@color/black</item>
         <!-- Customize your theme here. -->
     </style>
+
 </resources>

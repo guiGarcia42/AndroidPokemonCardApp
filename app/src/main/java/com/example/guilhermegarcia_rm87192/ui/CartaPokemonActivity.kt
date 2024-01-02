@@ -1,65 +1,83 @@
 package com.example.guilhermegarcia_rm87192.ui
 
-import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import androidx.activity.result.ActivityResult
+import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import com.example.guilhermegarcia_rm87192.R
 import com.example.guilhermegarcia_rm87192.databinding.ActivityCartaPokemonBinding
 import com.example.guilhermegarcia_rm87192.model.Pokemon
 import com.example.guilhermegarcia_rm87192.util.Constants
-import com.example.guilhermegarcia_rm87192.util.Constants.ACTIVITY_MAIN
-import com.example.guilhermegarcia_rm87192.util.Constants.ACTIVITY_SKILL
+import com.example.guilhermegarcia_rm87192.util.Constants.ACTIVITY_CARTA_POKEMON
+import com.example.guilhermegarcia_rm87192.util.Constants.ACTIVITY_LISTA_HABILIDADES
+import com.example.guilhermegarcia_rm87192.util.ViewUtils
 
 class CartaPokemonActivity : AppCompatActivity() {
+
+    private val register = activityResultLauncher()
+    private lateinit var pokemon: Pokemon
 
     private val binding: ActivityCartaPokemonBinding by lazy {
         ActivityCartaPokemonBinding.inflate(layoutInflater)
     }
 
-    private var pokemon: Pokemon = Pokemon(
-        getString(R.string.name),
-        getString(R.string.description_text),
-        mutableListOf()
-    )
-
     override fun onCreate(savedInstanceState: Bundle?) {
+        setTheme(Constants.temaAtual)
         super.onCreate(savedInstanceState)
-        setTheme(Constants.currentTheme)
         setContentView(binding.root)
 
+        // Método criado para resolver problema em que o layout não seguia a margem escrita no xml
+        ViewUtils.aplicarMargem(binding.root, 20)
 
-        binding.activityMainBotaoTema.setOnClickListener {
-            Constants.switchTheme()
+        pokemon = Pokemon(
+            getString(R.string.name),
+            getString(R.string.description_text),
+            mutableListOf()
+        )
+
+        binding.activityCartaPokemonBotaoTema.setOnClickListener {
+            Constants.trocarTema()
             recreate()
         }
 
-        binding.activityMainBotaoEditarHabilidades.setOnClickListener {
-            val intent = Intent(this, SkillList::class.java)
-            intent.putExtra(ACTIVITY_MAIN, pokemon)
+        binding.activityCartaPokemonBotaoEditarHabilidades.setOnClickListener {
+            val intent = Intent(this, ListaHabilidadesActivity::class.java)
+            intent.putExtra(ACTIVITY_CARTA_POKEMON, pokemon)
             register.launch(intent)
         }
     }
 
-    private val register = registerForActivityResult(
-        ActivityResultContracts.StartActivityForResult()
-    ) { result: ActivityResult ->
-        if (result.resultCode == Activity.RESULT_OK) {
-            result.data?.let { data ->
-                data.getParcelableExtra<Pokemon>(ACTIVITY_SKILL)?.let { pokemon = it }
+    private fun activityResultLauncher(): ActivityResultLauncher<Intent> {
+        return registerForActivityResult(
+            ActivityResultContracts.StartActivityForResult()
+        ) { result: ActivityResult ->
 
-                if (pokemon.skills.isEmpty()) {
-                    binding.activityMainTxtHabilidades.text = getString(R.string.skills_default)
-                } else {
-                    binding.activityMainTxtHabilidades.text = ""
-                    for (habilidade in pokemon.skills) {
-                        binding.activityMainTxtHabilidades.text =
-                            "${binding.activityMainTxtHabilidades.text}> ${habilidade}\n"
+            if (result.resultCode == RESULT_OK) {
+                result.data?.let { data ->
+                    data.getParcelableExtra<Pokemon>(ACTIVITY_LISTA_HABILIDADES)?.let { pokemon = it }
+
+                    if (pokemon.habilidades.isEmpty()) {
+                        binding.activityCartaPokemonTxtHabilidades.text =
+                            getString(R.string.skills_default)
+                    } else {
+                        binding.activityCartaPokemonTxtHabilidades.text = ""
+                        for ((index, habilidade) in pokemon.habilidades.withIndex()) {
+                            binding.activityCartaPokemonTxtHabilidades.text =
+                                "${binding.activityCartaPokemonTxtHabilidades.text}> $habilidade"
+
+                            // Adiciona quebra de linha apenas se não for o último item
+                            if (index < pokemon.habilidades.size - 1) {
+                                binding.activityCartaPokemonTxtHabilidades.append("\n")
+                            }
+                        }
                     }
                 }
             }
         }
     }
+
 }
+
+

@@ -1,108 +1,139 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
     tools:context=".ui.CartaPokemonActivity">
 
-    <TextView
-        android:id="@+id/activity_main_nome"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:text="@string/name"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/colorPrimaryVariant">
 
-    <ImageView
-        android:id="@+id/activity_main_imagem"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:src="@drawable/growlithe"
-        android:layout_marginTop="20dp"
-        app:layout_constraintStart_toStartOf="@+id/activity_main_nome"
-        app:layout_constraintEnd_toEndOf="@id/activity_main_nome"
-        app:layout_constraintTop_toBottomOf="@+id/activity_main_nome"/>
-
-    <TextView
-        android:id="@+id/activity_main_descricao"
-        android:text="@string/description"
-        app:layout_constraintStart_toStartOf="@+id/activity_main_nome"
-        app:layout_constraintEnd_toEndOf="@id/activity_main_nome"
-        app:layout_constraintTop_toBottomOf="@+id/activity_main_imagem"
-        style="@style/style_atributos" />
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/activity_main_card_descricao"
-        app:layout_constraintStart_toStartOf="@+id/activity_main_descricao"
-        app:layout_constraintEnd_toEndOf="@id/activity_main_descricao"
-        app:layout_constraintTop_toBottomOf="@+id/activity_main_descricao"
-        style="@style/style_cardView">
-
-        <TextView
-            android:id="@+id/activity_main_txt_descricao"
-            android:layout_width="match_parent"
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            style="@style/style_cardView"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_margin="12dp"
-            android:text="@string/description_text"
-            android:textSize="16dp"/>
-
-    </androidx.cardview.widget.CardView>
-
-    <TextView
-        android:id="@+id/activity_main_habilidades"
-        android:text="@string/skills"
-        style="@style/style_atributos"
-        app:layout_constraintStart_toStartOf="@+id/activity_main_descricao"
-        app:layout_constraintEnd_toEndOf="@id/activity_main_descricao"
-        app:layout_constraintTop_toBottomOf="@+id/activity_main_card_descricao"/>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/activity_main_card_habilidades"
-        style="@style/style_cardView"
-        app:layout_constraintStart_toStartOf="@+id/activity_main_habilidades"
-        app:layout_constraintEnd_toEndOf="@id/activity_main_habilidades"
-        app:layout_constraintTop_toBottomOf="@+id/activity_main_habilidades">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical">
+            android:background="?attr/colorOnBackground"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
             <TextView
-                android:id="@+id/activity_main_txt_habilidades"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="12dp"
-                android:layout_weight="1"
-                android:text="@string/skills_default"
-                android:textSize="16dp" />
-
-            <Button
-                android:id="@+id/activity_main_botao_editar_habilidades"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/button_edit"
-                android:layout_marginEnd="20dp" />
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginVertical="2dp"
+                android:text="BASIC"
+                android:textSize="18dp"
+                android:textStyle="italic|bold"
 
-        </LinearLayout>
+                />
 
-    </androidx.cardview.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
 
-    <Button
-        android:id="@+id/activity_main_botao_tema"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="@string/button_theme_scarlet"
-        android:layout_margin= "20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        <TextView
+            android:id="@+id/activity_carta_pokemon_nome"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            android:text="@string/name"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/cardView"
+            app:layout_constraintTop_toTopOf="parent" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <ImageView
+            android:id="@+id/activity_carta_pokemon_imagem"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:src="@drawable/growlithe"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activity_carta_pokemon_nome" />
+
+        <TextView
+            android:id="@+id/activity_carta_pokemon_descricao"
+            style="@style/style_atributos"
+            android:text="@string/description"
+            app:layout_constraintEnd_toEndOf="@+id/activity_carta_pokemon_imagem"
+            app:layout_constraintStart_toStartOf="@+id/activity_carta_pokemon_imagem"
+            app:layout_constraintTop_toBottomOf="@+id/activity_carta_pokemon_imagem" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/activity_carta_pokemon_card_descricao"
+            style="@style/style_cardView"
+            app:layout_constraintEnd_toEndOf="@id/activity_carta_pokemon_descricao"
+            app:layout_constraintStart_toStartOf="@+id/activity_carta_pokemon_descricao"
+            app:layout_constraintTop_toBottomOf="@+id/activity_carta_pokemon_descricao"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/activity_carta_pokemon_txt_descricao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:text="@string/description_text"
+                android:textSize="16dp" />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/activity_carta_pokemon_habilidades"
+            style="@style/style_atributos"
+            android:text="@string/skills"
+            app:layout_constraintEnd_toEndOf="@id/activity_carta_pokemon_descricao"
+            app:layout_constraintStart_toStartOf="@+id/activity_carta_pokemon_descricao"
+            app:layout_constraintTop_toBottomOf="@+id/activity_carta_pokemon_card_descricao" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/activity_carta_pokemon_card_habilidades"
+            style="@style/style_cardView"
+            android:background="@color/white"
+            app:layout_constraintEnd_toEndOf="@id/activity_carta_pokemon_habilidades"
+            app:layout_constraintStart_toStartOf="@+id/activity_carta_pokemon_habilidades"
+            app:layout_constraintTop_toBottomOf="@+id/activity_carta_pokemon_habilidades">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/activity_carta_pokemon_txt_habilidades"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="12dp"
+                    android:layout_weight="1"
+                    android:text="@string/skills_default"
+                    android:textSize="16dp" />
+
+                <Button
+                    android:id="@+id/activity_carta_pokemon_botao_editar_habilidades"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:text="@string/button_edit" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/activity_carta_pokemon_botao_tema"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="@string/button_theme_scarlet"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
+

@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="backgroundScarlet">#FFB9B9</color>
-    <color name="backgroundViolet">#DFC4FF</color>
-    <color name="scarlet">#C62828</color>
+    <color name="yellow">#FEEF03</color>
+    <color name="gray">#C0C0C0</color>
+
+    <!--    Scarlet theme   -->
+    <color name="backgroundScarlet">#E34226</color>
+    <color name="scarlet">#911C1C</color>
+
+    <!--    Violet theme   -->
+    <color name="backgroundViolet">#CB25E3</color>
     <color name="violet">#6A1B9A</color>
 </resources>

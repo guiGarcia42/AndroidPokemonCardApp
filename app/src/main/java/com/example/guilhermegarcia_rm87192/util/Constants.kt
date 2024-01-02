@@ -3,21 +3,20 @@ package com.example.guilhermegarcia_rm87192.util
 import com.example.guilhermegarcia_rm87192.R
 
 object Constants {
-    const val ACTIVITY_SKILL = "Activity Skills"
-    const val ACTIVITY_MAIN = "Activity Main"
+    const val ACTIVITY_LISTA_HABILIDADES = "Activity Lista de Habilidades"
+    const val ACTIVITY_CARTA_POKEMON = "Activity Carta do Pokemon"
 
-    var currentTheme = R.style.Theme_GuilhermeGarcia_RM87192
+    var temaAtual = R.style.Theme_GuilhermeGarcia_RM87192_TemaScarlet
 
-    private const val SCARLET = R.style.Theme_GuilhermeGarcia_RM87192
-    private const val VIOLET = R.style.ThemeViolet
+    private const val SCARLET = R.style.Theme_GuilhermeGarcia_RM87192_TemaScarlet
+    private const val VIOLET = R.style.Theme_GuilhermeGarcia_RM87192_TemaViolet
 
-    fun switchTheme(){
-        currentTheme = when(currentTheme){
+    fun trocarTema(){
+        temaAtual = when(temaAtual){
             SCARLET -> VIOLET
             VIOLET -> SCARLET
             else -> -1
         }
     }
-
 
 }
