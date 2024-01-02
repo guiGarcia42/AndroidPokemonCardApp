@@ -1,4 +1,4 @@
-package com.example.guilhermegarcia_rm87192
+package com.example.guilhermegarcia_rm87192.model
 
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize

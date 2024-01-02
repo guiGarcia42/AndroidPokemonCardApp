@@ -1,7 +1,7 @@
 <resources>
-    <string name="app_name">GuilhermeGarcia_RM87192</string>
-    <string name="name_pokemon">Growlithe!</string>
-    <string name="description_pokemon">Its excellent sense of smell ensures that this Pokémon doesnt forget a scent, no matter what. He uses his sense of smell to detect the emotions of others.</string>
+    <string name="app_name">Growlithe Pokemon Card</string>
+    <string name="name" translatable="false">Growlithe!</string>
+    <string name="description_text">Its excellent sense of smell ensures that this Pokémon doesnt forget a scent, no matter what. He uses his sense of smell to detect the emotions of others.</string>
     <string name="button_edit">+ EDIT SKILLS</string>
     <string name="description">Description:</string>
     <string name="skills">Skills:</string>

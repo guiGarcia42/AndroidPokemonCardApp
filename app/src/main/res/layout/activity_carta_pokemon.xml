@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.CartaPokemonActivity">
+
+    <TextView
+        android:id="@+id/activity_main_nome"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="@string/name"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:id="@+id/activity_main_imagem"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/growlithe"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="@+id/activity_main_nome"
+        app:layout_constraintEnd_toEndOf="@id/activity_main_nome"
+        app:layout_constraintTop_toBottomOf="@+id/activity_main_nome"/>
+
+    <TextView
+        android:id="@+id/activity_main_descricao"
+        android:text="@string/description"
+        app:layout_constraintStart_toStartOf="@+id/activity_main_nome"
+        app:layout_constraintEnd_toEndOf="@id/activity_main_nome"
+        app:layout_constraintTop_toBottomOf="@+id/activity_main_imagem"
+        style="@style/style_atributos" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/activity_main_card_descricao"
+        app:layout_constraintStart_toStartOf="@+id/activity_main_descricao"
+        app:layout_constraintEnd_toEndOf="@id/activity_main_descricao"
+        app:layout_constraintTop_toBottomOf="@+id/activity_main_descricao"
+        style="@style/style_cardView">
+
+        <TextView
+            android:id="@+id/activity_main_txt_descricao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:text="@string/description_text"
+            android:textSize="16dp"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/activity_main_habilidades"
+        android:text="@string/skills"
+        style="@style/style_atributos"
+        app:layout_constraintStart_toStartOf="@+id/activity_main_descricao"
+        app:layout_constraintEnd_toEndOf="@id/activity_main_descricao"
+        app:layout_constraintTop_toBottomOf="@+id/activity_main_card_descricao"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/activity_main_card_habilidades"
+        style="@style/style_cardView"
+        app:layout_constraintStart_toStartOf="@+id/activity_main_habilidades"
+        app:layout_constraintEnd_toEndOf="@id/activity_main_habilidades"
+        app:layout_constraintTop_toBottomOf="@+id/activity_main_habilidades">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/activity_main_txt_habilidades"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:layout_weight="1"
+                android:text="@string/skills_default"
+                android:textSize="16dp" />
+
+            <Button
+                android:id="@+id/activity_main_botao_editar_habilidades"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/button_edit"
+                android:layout_marginEnd="20dp" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <Button
+        android:id="@+id/activity_main_botao_tema"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/button_theme_scarlet"
+        android:layout_margin= "20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

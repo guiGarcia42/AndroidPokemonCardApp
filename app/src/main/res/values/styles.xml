@@ -4,22 +4,22 @@
     <style name="switchStyle">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textSize">15sp</item>
+        <item name="android:textSize">15dp</item>
     </style>
 
-    <style name="atributesStyle">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_margin">20dp</item>
+    <style name="style_atributos">
+        <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textSize">20sp</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:textSize">20dp</item>
         <item name="android:textStyle">italic</item>
     </style>
 
-    <style name="cardAtributesStyle">
-        <item name="android:layout_width">match_parent</item>
+    <style name="style_cardView">
+        <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:background">@color/white</item>
-        <item name="android:layout_marginEnd">30dp</item>
-        <item name="android:layout_marginStart">30dp</item>
+        <item name="cardCornerRadius">20dp</item>
     </style>
+
 </resources>

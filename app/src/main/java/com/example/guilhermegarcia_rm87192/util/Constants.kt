@@ -1,4 +1,6 @@
-package com.example.guilhermegarcia_rm87192
+package com.example.guilhermegarcia_rm87192.util
+
+import com.example.guilhermegarcia_rm87192.R
 
 object Constants {
     const val ACTIVITY_SKILL = "Activity Skills"
@@ -10,7 +12,7 @@ object Constants {
     private const val VIOLET = R.style.ThemeViolet
 
     fun switchTheme(){
-        Constants.currentTheme = when(Constants.currentTheme){
+        currentTheme = when(currentTheme){
             SCARLET -> VIOLET
             VIOLET -> SCARLET
             else -> -1

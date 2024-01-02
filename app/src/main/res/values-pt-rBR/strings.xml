@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">GuilhermeGarcia_RM87192</string>
-    <string name="description_pokemon">Seu excelente olfato garante que este Pokémon não esqueça nenhum cheiro, não importa do quê. Ele usa o olfato para detectar as emoções dos outros.</string>
+    <string name="app_name">Carta do Pokemon Growlithe</string>
+    <string name="description_text">Seu excelente olfato garante que este Pokémon não esqueça nenhum cheiro, não importa do quê. Ele usa o olfato para detectar as emoções dos outros.</string>
     <string name="button_edit">+ EDITAR HABILIDADES</string>
     <string name="description">Descrição:</string>
     <string name="skills">Habilidades:</string>
