@@ -9,7 +9,7 @@
                 android:startColor="#E1B0A8"
                 android:endColor="@color/backgroundScarlet"/>
 
-            <corners android:radius="20dp" />
+            <corners android:radius="10dp" />
 
         </shape>
     </item>

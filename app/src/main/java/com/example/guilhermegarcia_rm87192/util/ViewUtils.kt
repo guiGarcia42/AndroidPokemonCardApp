@@ -12,7 +12,7 @@ object ViewUtils {
 
         // Aplicando as margens na ViewGroup
         val params = view.layoutParams as ViewGroup.MarginLayoutParams
-        params.setMargins(margemEmPX, margemEmPX, margemEmPX, margemEmPX)
+        params.setMargins(margemEmPX, 0, margemEmPX, margemEmPX)
         view.layoutParams = params
     }
 }

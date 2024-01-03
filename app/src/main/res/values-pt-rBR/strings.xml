@@ -6,14 +6,14 @@
     <string name="description">Descrição:</string>
     <string name="skills">Habilidades:</string>
     <string name="skills_default">> adicione habilidades com botão</string>
-    <string name="button_theme_scarlet">SCARLET</string>
-    <string name="button_theme_violet">VIOLET</string>
     <string name="skill_list">Lista de Habilidades</string>
     <string name="skill1">Mordida</string>
     <string name="skill2">Brasas</string>
     <string name="skill3">Presa de Fogo</string>
     <string name="skill4">Explosão de Fogo</string>
     <string name="button_Update_Skills">Atualizar Habilidades</string>
+    <string name="rarity">BÁSICO</string>
+    <string name="image_description">NO. 0058 Pokémon Cachorrinho AT: 71 cm PS: 19 kgs.</string>
 
 
 </resources>

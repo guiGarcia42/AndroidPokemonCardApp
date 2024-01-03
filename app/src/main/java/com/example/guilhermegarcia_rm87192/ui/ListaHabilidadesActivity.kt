@@ -2,6 +2,7 @@ package com.example.guilhermegarcia_rm87192.ui
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.example.guilhermegarcia_rm87192.R
 import com.example.guilhermegarcia_rm87192.databinding.ActivityListaHabilidadesBinding
@@ -28,6 +29,7 @@ class ListaHabilidadesActivity : AppCompatActivity() {
             binding.activityListaHabilidadesSwitch3,
             binding.activityListaHabilidadesSwitch4
         )
+
     }
 
     private val habilidadesTexts by lazy {
@@ -39,8 +41,12 @@ class ListaHabilidadesActivity : AppCompatActivity() {
             R.string.skill4
         )
 
+        for ((index, switch) in habilidadeSwitches.withIndex()) {
+            switch.tag = getString(habilidadeIds[index])
+        }
+
         habilidadeIds.map { id ->
-            id to habilidadeSwitches.firstOrNull { switch ->
+            id to habilidadeSwitches.find { switch ->
                 switch.tag == getString(id)
             }
         }.toMap()
@@ -62,17 +68,19 @@ class ListaHabilidadesActivity : AppCompatActivity() {
                 putExtra(ACTIVITY_LISTA_HABILIDADES, pokemon)
                 setResult(RESULT_OK, this)
             }
+            Log.i("ListaHabilidadesActivity", "onCreate: ${pokemon.habilidades}")
             this.finish()
         }
 
+//        habilidadeSwitches.forEach { switch -> Log.i("ListaHabilidadesActivity", "${getString(switch.tag)}")}
         habilidadesTexts.forEach { (id, switch) ->
             switch?.isChecked = pokemon.habilidades.contains(getString(id))
 
             switch?.setOnCheckedChangeListener { _, isChecked ->
+                Log.i("ListaHabilidadesActivity", "Switch with tag ${getString(id)} checked: $isChecked")
                 atualizaHabilidades(isChecked, getString(id))
             }
         }
-
     }
 
     private fun atualizaHabilidades(isChecked: Boolean, habilidade: String) {

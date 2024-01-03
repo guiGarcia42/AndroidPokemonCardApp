@@ -2,30 +2,38 @@
 
     <!-- TemaScarlet -->
     <style name="Theme.GuilhermeGarcia_RM87192.TemaScarlet" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-        <!-- Primary brand color. -->
+
+        <!--    Cores principais     -->
         <item name="colorPrimary">@color/scarlet</item>
         <item name="colorPrimaryVariant">@drawable/gradient_background_scarlet</item>
-        <item name="colorOnPrimary">@color/white</item>
         <item name="colorSecondary">@color/backgroundScarlet</item>
+
+        <!--    Aba de notificações     -->
         <item name="colorPrimaryDark">@color/gray</item>
-        <item name="android:windowBackground">@color/gray</item>
+
+        <!--    Cores básicas     -->
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="android:windowBackground">@drawable/gradient_background_card</item>
         <item name="colorOnBackground">@color/gray</item>
         <item name="android:textColor">@color/black</item>
-        <!-- Customize your theme here. -->
     </style>
 
     <!-- TemaViolet -->
     <style name="Theme.GuilhermeGarcia_RM87192.TemaViolet" parent="Theme.GuilhermeGarcia_RM87192.TemaScarlet">
-        <!-- Primary brand color. -->
+
+        <!--    Cores principais     -->
         <item name="colorPrimary">@color/violet</item>
         <item name="colorPrimaryVariant">@drawable/gradient_background_violet</item>
-        <item name="colorOnPrimary">@color/white</item>
         <item name="colorSecondary">@color/backgroundViolet</item>
+
+        <!--    Aba de notificações     -->
         <item name="colorPrimaryDark">@color/gray</item>
-        <item name="android:windowBackground">@color/gray</item>
+
+        <!--    Cores básicas     -->
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="android:windowBackground">@drawable/gradient_background_card</item>
         <item name="colorOnBackground">@color/gray</item>
         <item name="android:textColor">@color/black</item>
-        <!-- Customize your theme here. -->
     </style>
 
 </resources>

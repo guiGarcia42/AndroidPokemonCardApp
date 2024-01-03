@@ -1,17 +1,21 @@
 <resources>
     <string name="app_name">Pokemon Card</string>
-    <string name="name" translatable="false">Growlithe!</string>
-    <string name="description_text">Its excellent sense of smell ensures that this Pokémon doesnt forget a scent, no matter what. He uses his sense of smell to detect the emotions of others.</string>
+    <string name="name" translatable="false">Growlithe</string>
+    <string name="description_text">Its excellent sense of smell ensures that this Pokémon doesn\'t forget a scent, no matter what. He uses his sense of smell to detect the emotions of others.</string>
     <string name="button_edit">+ EDIT SKILLS</string>
     <string name="description">Description:</string>
     <string name="skills">Skills:</string>
     <string name="skills_default">> add Skill with Button</string>
-    <string name="button_theme_scarlet">SCARLET</string>
-    <string name="button_theme_violet">VIOLET</string>
+    <string name="button_theme_scarlet" translatable="false">SCARLET</string>
+    <string name="button_theme_violet" translatable="false">VIOLET</string>
     <string name="skill_list">Skill List</string>
     <string name="skill1">Bite</string>
     <string name="skill2">Ember</string>
     <string name="skill3">Fire Fang</string>
     <string name="skill4">Fire Blast</string>
     <string name="button_Update_Skills">Update Skills</string>
+    <string name="rarity">BASIC</string>
+    <string name="image_description">NO. 0058 Puppy Pokémon HT: 2\'4\" WT:41.9 lbs.</string>
+    <string name="power" translatable="false">70</string>
+    <string name="hp" translatable="false">HP</string>
 </resources>

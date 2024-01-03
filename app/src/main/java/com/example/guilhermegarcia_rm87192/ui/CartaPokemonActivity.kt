@@ -42,6 +42,11 @@ class CartaPokemonActivity : AppCompatActivity() {
             recreate()
         }
 
+    }
+
+    override fun onResume() {
+        super.onResume()
+
         binding.activityCartaPokemonBotaoEditarHabilidades.setOnClickListener {
             val intent = Intent(this, ListaHabilidadesActivity::class.java)
             intent.putExtra(ACTIVITY_CARTA_POKEMON, pokemon)
